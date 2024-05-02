@@ -3,9 +3,9 @@
 def string_to_int(s):
 
     try:
-        print(int(s))
+        return int(s)
     except ValueError:
-        print('ОШИБКА: невозможно преобразовать "s" в целое число')
+        return f'ОШИБКА: невозможно преобразовать "s" в целое число'
 
 
 
@@ -14,21 +14,20 @@ def read_file(filename):
         with open(filename, 'r') as file:
             return file.read()
     except FileNotFoundError:
-        print('ошибка: файл  не найден')
+        return f'ошибка: файл  не найден'
     except IOError:
-        print('ошибка ввода/вывода при работе с файлом')
+        return f'ошибка ввода/вывода при работе с файлом'
 
 
 
 
 def divide_numbers(a,b):
-    return a/b
-try:
-        print(int(a / b))
+    try:
+        return a/b
     except ZeroDivisionError:
-        print('ОШИБКА: на ноль делить нельзя')
+        return f'ОШИБКА: на ноль делить нельзя'
     except TypeError:
-        print('ОШИБКА: аргументы не числа')
+        return f'ОШИБКА: аргументы не числа'
 
 
 
@@ -36,10 +35,10 @@ try:
 def access_list_element(lst, index):
 
     try:
-        print(lst[index])
+        return lst[index]
     except IndexError:
-        print('ОШИБКА: индекс {index} вне диапозона списка')
+        return f'ОШИБКА: индекс {index} вне диапозона списка'
     except TypeError:
-        print('ОШИБКА: индекс должен быть целым числом')
+        return f'ОШИБКА: индекс должен быть целым числом'
 
 
